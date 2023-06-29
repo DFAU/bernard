@@ -22,9 +22,8 @@ class InMemoryQueue extends AbstractQueue
         $this->queue->setIteratorMode(\SplQueue::IT_MODE_DELETE);
     }
 
-    /**
-     * {@inheritdoc}
-     */
+
+    #[\ReturnTypeWillChange]
     public function count()
     {
         $this->errorIfClosed();
