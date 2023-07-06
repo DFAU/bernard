@@ -5,7 +5,8 @@ namespace Bernard\Normalizer;
 use Assert\Assertion;
 use Assert\AssertionFailedException;
 use Bernard\Envelope;
-use Normalt\Normalizer\AggregateNormalizer;
+use
+    Normalt\Normalizer\AggregateNormalizer;
 use Normalt\Normalizer\AggregateNormalizerAware;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Exception\RuntimeException;
@@ -39,7 +40,7 @@ final class EnvelopeNormalizer implements NormalizerInterface, DenormalizerInter
     /**
      * {@inheritdoc}
      */
-    public function denormalize($data, $class, $format = null, array $context = [])
+    public function denormalize($data, $type, $format = null, array $context = [])
     {
         try {
             Assertion::choicesNotEmpty($data, ['message', 'class', 'timestamp']);
